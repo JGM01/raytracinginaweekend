@@ -56,13 +56,23 @@ using color = vec3;     // RGB color
 #endif
 
 /**
- * @brief vec3 Utility Functions
+ * @brief       Write to given output stream.
+ * 
+ * @param out   Reference to output stream to be written to.
+ * @param v     Reference to some vec3 to be written.
+ * @return      The output stream with the vec3 reference written to it. 
  */
-
 inline std::ostream& operator<<(std::ostream &out, const vec3 &v) {
     return out << v.e[0] << ' ' << v.e[1] << ' ' << v.e[2];
 }
 
+/**
+ * @brief       Add two vec3s.
+ * 
+ * @param u     Some arbitrary vec3.
+ * @param v     Some arbitrary vec3.
+ * @return      The sum of the two vec3s.
+ */
 inline vec3 operator+(const vec3 &u, const vec3 &v) {
     return vec3(
         u.e[0] + v.e[0], 
@@ -71,6 +81,13 @@ inline vec3 operator+(const vec3 &u, const vec3 &v) {
     );
 }
 
+/**
+ * @brief       Subtract two vec3s.
+ * 
+ * @param u     Some arbitrary vec3.
+ * @param v     Some arbitrary vec3.
+ * @return      The difference of the two vec3s.
+ */
 inline vec3 operator-(const vec3 &u, const vec3 &v) {
     return vec3(
         u.e[0] - v.e[0], 
@@ -79,6 +96,13 @@ inline vec3 operator-(const vec3 &u, const vec3 &v) {
     );
 }
 
+/**
+ * @brief       Multiply two vec3s.
+ * 
+ * @param u     Some arbitrary vec3.
+ * @param v     Some arbitrary vec3.
+ * @return      The product of the two vec3s.
+ */
 inline vec3 operator*(const vec3 &u, const vec3 &v) {
     return vec3(
         u.e[0] * v.e[0], 
@@ -87,6 +111,13 @@ inline vec3 operator*(const vec3 &u, const vec3 &v) {
     );
 }
 
+/**
+ * @brief       Multiply a vec3 with some number.
+ * 
+ * @param t     Some arbitrary number to multiply with a vec3.
+ * @param v     Some arbitrary vec3.
+ * @return      A vec3 with points having been multiplied by t.
+ */
 inline vec3 operator*(double t, const vec3 &v) {
     return vec3(
         t * v.e[0], 
@@ -95,14 +126,29 @@ inline vec3 operator*(double t, const vec3 &v) {
     );
 }
 
+/* Similar to above method, but allows for more arbitrary multiplicands */
 inline vec3 operator*(const vec3 &v, double t) {
     return t * v;
 }
 
+/**
+ * @brief       Divide a vec3 by some number.
+ * 
+ * @param v     Dividend.
+ * @param t     Divisor.
+ * @return      A vec3 with points having been divided by t. 
+ */
 inline vec3 operator/(vec3 v, double t) {
     return (1 / t) * v;
 }
 
+/**
+ * @brief       Determine the dot product of two vec3.
+ * 
+ * @param u     Some arbitrary vec3.
+ * @param v     Some arbitrary vec3.
+ * @return      Resulting dot product. 
+ */
 inline double dot(const vec3 &u, const vec3 &v) {
     return 
         u.e[0] * v.e[0] + 
@@ -110,6 +156,13 @@ inline double dot(const vec3 &u, const vec3 &v) {
         u.e[2] * v.e[2] ;
 }
 
+/**
+ * @brief       Cross product of two vec3.
+ * 
+ * @param u     Some arbitrary vec3.
+ * @param v     Some arbitrary vec3.
+ * @return      Resulting cross product
+ */
 inline vec3 cross(const vec3 &u, const vec3 &v) {
     return vec3(
         u.e[1] * v.e[2] - u.e[2] * v.e[1],
@@ -118,6 +171,8 @@ inline vec3 cross(const vec3 &u, const vec3 &v) {
     );
 }
 
+
+/* Produce a unit vector of some arbitrary vec3 */
 inline vec3 unit_vector(vec3 v) {
     return v / v.length();
 }
