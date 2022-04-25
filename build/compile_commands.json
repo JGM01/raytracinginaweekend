@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/jacobgm/projects/raytracinginaweekend/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/raytracinginaweekend.dir/main.cpp.o -c /home/jacobgm/projects/raytracinginaweekend/main.cpp",
+  "file": "/home/jacobgm/projects/raytracinginaweekend/main.cpp"
+}
+]

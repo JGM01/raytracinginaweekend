@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/raytracinginaweekend.dir/main.cpp.o  -o raytracinginaweekend 
