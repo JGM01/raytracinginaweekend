@@ -15,10 +15,16 @@ iostream
 /home/jacobgm/projects/raytracinginaweekend/main.cpp
 color.hpp
 /home/jacobgm/projects/raytracinginaweekend/color.hpp
+ray.hpp
+/home/jacobgm/projects/raytracinginaweekend/ray.hpp
 vec3.hpp
 /home/jacobgm/projects/raytracinginaweekend/vec3.hpp
 iostream
 -
+
+/home/jacobgm/projects/raytracinginaweekend/ray.hpp
+vec3.hpp
+/home/jacobgm/projects/raytracinginaweekend/vec3.hpp
 
 /home/jacobgm/projects/raytracinginaweekend/vec3.hpp
 cmath

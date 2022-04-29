@@ -3,5 +3,6 @@
 
 CMakeFiles/raytracinginaweekend.dir/main.cpp.o: ../color.hpp
 CMakeFiles/raytracinginaweekend.dir/main.cpp.o: ../main.cpp
+CMakeFiles/raytracinginaweekend.dir/main.cpp.o: ../ray.hpp
 CMakeFiles/raytracinginaweekend.dir/main.cpp.o: ../vec3.hpp
 
